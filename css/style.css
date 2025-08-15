@@ -174,9 +174,24 @@ h4 {
   }
 }
 
+
+.instagram {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #E1306C; /* cor do Instagram */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.instagram:hover {
+  color: #ff5da2; /* cor ao passar o mouse */
+}
+
+
 /* Sobre */
 .sobre {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   margin-top: -30px;
 }
 
@@ -189,21 +204,157 @@ h4 {
 }
 
 .sobre-caixa {
-  padding: 2rem;
+  padding: 2.5rem;
   max-width: 750px;
   margin: 0 auto;
   border-radius: 16px;
   border: 1px solid var(--vidro);
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sobre-paragrafo {
-  text-align: justify;
   font-size: 1.1rem;
   color: var(--claro);
-  line-height: 1.6;
-  margin: 13px 0 1.5rem 0;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  width: 100%;
+  hyphens: auto;
+  word-spacing: 0.05em;
+}
+.sobre-paragrafo2 {
+  display: inline-block; /* Faz o fundo se ajustar ao tamanho do conteúdo */
+  font-size: 1.0rem; /* Menor que 1.1rem */
+  padding: 1.2rem 2rem; /* Mais respiro em volta do texto */
+  max-width: fit-content; /* Garante que não ocupe a largura toda */
+  text-align: center;
+  
+  /* Seu estilo original abaixo */
+  color: var(--claro);
+  line-height: 1.7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, rgba(197, 240, 5, 0.979), rgba(130, 201, 16, 0.658) 0.30%);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px rgba(255,255,255,0.2);
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.container {
+  display: flex;
+  justify-content: center; /* centraliza na horizontal */
+  align-items: center;     /* centraliza na vertical */
+}
+
+
+/* Efeito de luz passando - elemento pseudo */
+.sobre-paragrafo2::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  animation: light-sweep 3s infinite;
+  pointer-events: none; /* Para não interferir com cliques */
+}
+
+/* Animação da luz passando */
+@keyframes light-sweep {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+.sobre-paragrafo2 strong {
+  background: linear-gradient(to right, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.sobre-paragrafo2:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.068), rgba(155, 100, 255, 0.15));
+  backdrop-filter: blur(25px);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Variação com cor mais chamativa (opcional) */
+.sobre-paragrafo2.colorido {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0), 
+    rgb(255, 255, 255)
+  );
+  border-color: rgba(74, 144, 226, 0.3);
+}
+
+.sobre-paragrafo2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Para telas menores - responsividade */
+@media (max-width: 768px) {
+  .sobre-paragrafo2 {
+    padding: 1.5rem;
+    border-radius: 15px;
+    font-size: 1rem;
+  }
+}
+
+.sobre-paragrafo:last-child {
+  margin-bottom: 0;
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+  .sobre-titulo {
+    font-size: 2.5rem;
+  }
+  
+  .sobre-caixa {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .sobre-paragrafo {
+    font-size: 1rem;
+    text-align: left;
+  }
 }
 
 /* Projetos */
