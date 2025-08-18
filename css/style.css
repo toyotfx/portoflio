@@ -178,7 +178,7 @@ h4 {
 .instagram {
   display: inline-block;
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 17px;
   color: #E1306C; /* cor do Instagram */
   text-decoration: none;
   transition: color 0.3s;
@@ -188,12 +188,57 @@ h4 {
   color: #ff5da2; /* cor ao passar o mouse */
 }
 
+.contato-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  margin-top: 8px;
+  color: #ccc;
+}
 
+.contato-link {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+.contato-link:hover {
+  text-decoration: underline;
+}
+
+.icone {
+  fill: #00ff99;
+  flex-shrink: 0;
+}
 /* Sobre */
 .sobre {
   padding: 2rem 1rem;
   margin-top: -30px;
 }
+  .texto-resumido {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* número de linhas visíveis inicialmente */
+    -webkit-box-orient: vertical;
+    transition: all 0.3s ease;
+  }
+
+  .texto-expandido {
+    -webkit-line-clamp: unset;
+  }
+
+  .botao-toggle {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #00ff99;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .botao-toggle:hover {
+    text-decoration: underline;
+  }
 
 .sobre-titulo {
   font-size: 3rem;
@@ -621,24 +666,16 @@ h4 {
 }
 
 
-.projetos-card3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  cursor: pointer;
-  padding: 1rem;
-  text-align: center;
-  transition: all 0.5s ease;
-  overflow: hidden;
+.projetos-caixa3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* sempre 2 colunas */
+  gap: 20px;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
-  border: 1px solid var(--vidro);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-top: -4rem;
 }
-
 
 
 
@@ -1088,3 +1125,27 @@ h4 {
   pointer-events: none; /* não bloqueia o clique */
 }
 </style>
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background-color: #000; /* ou o que estiver usando */
+  color: #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.email-info {
+  margin-top: 4px;
+  font-size: 17px;
+  color: #ccc;
+}
+
+.email-link {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
