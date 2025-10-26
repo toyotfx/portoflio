@@ -54,3 +54,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 setupCustomPlayer('video-03', 'center-play-03', 'progress-03');
 
+setupCustomPlayer('video-angelo-01', 'center-play-angelo-01', 'progress-angelo-01');
+  setupCustomPlayer('video-angelo-02', 'center-play-angelo-02', 'progress-angelo-02');
+  setupCustomPlayer('video-outraempresa-01', 'center-play-outraempresa-01', 'progress-outraempresa-01');
+
+
+
+  let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-img');
+const dots = document.querySelectorAll('.dot');
+const totalImages = images.length;
+
+// Função para mostrar imagem
+function showImage(index) {
+  images.forEach(img => img.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  images[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+// Botão próximo
+document.getElementById('next-btn').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalImages;
+  showImage(currentIndex);
+});
+
+// Botão anterior
+document.getElementById('prev-btn').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+  showImage(currentIndex);
+});
+
+// Clique nas bolinhas
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(currentIndex);
+  });
+});
+
+// Autoplay (troca automática a cada 3 segundos)
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalImages;
+  showImage(currentIndex);
+}, 3000); // 3000ms = 3 segundos

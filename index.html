@@ -28,14 +28,26 @@
 
 
   <!-- Navegação -->
-  <nav class="navegacao">
-    <ul class="menu">
-      <li><a href="#home" class="menu-link">Início</a></li>
-      <li><a href="#sobre" class="menu-link">Sobre</a></li>
-      <li><a href="#projetos" class="menu-link">Projetos</a></li>
-      <li><a href="#contato" class="menu-link">Contato</a></li>
-    </ul>
-  </nav>
+<nav class="navegacao">
+  <ul class="menu">
+    <li><a href="#home" class="menu-link">Início</a></li>
+    <li><a href="#sobre" class="menu-link">Sobre</a></li>
+    
+    <!-- MENU COM DROPDOWN -->
+    <li class="dropdown">
+      <a href="#projetos" class="menu-link">Projetos ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="#videos">Vídeos</a></li>
+        <li><a href="#banners">Banners</a></li>
+        <li><a href="#youtube">Youtube</a></li>
+        <li><a href="#angelo-lubrificantes">Angelo Lubrificantes</a></li>
+        <li><a href="#imagens">Imagens</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#contato" class="menu-link">Contato</a></li>
+  </ul>
+</nav>
 
   <!-- Cabeçalho -->
   <header id="home" class="cabecalho">
@@ -263,22 +275,136 @@
           </div>
          </div>
 
-        <div class="projetos-card2">
-  <div class="custom-video-player">
-    <a href="https://www.youtube.com/watch?v=cRWjao1ZiVA" target="_blank">
-      <div class="video-thumbnail">
-        <img src="https://img.youtube.com/vi/cRWjao1ZiVA/maxresdefault.jpg" alt="Thumbnail do vídeo">
-        <button class="center-play vidro"></button>
-      </div>
-    </a>
-  </div>
-  <div class="caixa-textos-projetos1">
-    <h3 class="info-projetos2">Projeto Jean na Gringa</h3>
-    <p class="paragrafo-projetos2">Vídeo para Youtube</p>
-  </div>
-</div>
-</div>
 </section>
+<section id="angelo-lubrificantes" class="angelo-lubrificantes">
+  <!-- SEÇÃO ANGELO LUBRIFICANTES -->
+  <div class="empresa-secao">
+    <h2 class="empresa-titulo">Angelo Lubrificantes</h2>
+    
+    <div class="projetos-caixa">
+      <div class="projetos-card1">
+        <div class="custom-video-player">
+          <video class="projetos-video1" id="video-angelo-01">
+            <source src="./assets/video/não finalizado 2.mp4" type="video/mp4">
+          </video>
+          <button class="center-play vidro" id="center-play-angelo-01"></button>
+          <div class="video-controls">
+            <div class="progress-bar-container">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-neon" id="progress-angelo-01"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caixa-textos-projetos1">
+          <h3 class="info-projetos2">Campanha Institucional</h3>
+          <p class="paragrafo-projetos2">Vídeo promocional Angelo</p>
+        </div>
+      </div>
+  <div class="projetos-card1">
+        <div class="custom-video-player">
+          <video class="projetos-video1" id="video-angelo-02">
+            <source src="./assets/video/ANGELO FINALIZADO real.mp4" type="video/mp4">
+          </video>
+          <button class="center-play vidro" id="center-play-angelo-02"></button>
+          <div class="video-controls">
+            <div class="progress-bar-container">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-neon" id="progress-angelo-02"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caixa-textos-projetos1">
+          <h3 class="info-projetos2">Campanha Institucional</h3>
+          <p class="paragrafo-projetos2">Vídeo promocional Angelo</p>
+        </div>
+      <!-- Adicione mais vídeos da Angelo aqui -->
+    </div>
+  </div>
+  <section>
+<section id="youtube" class="youtube">
+  <div class="Youtube">
+    <h2 class="Youtube-Titulo">Youtube</h2>
+  </div>
+ <div class="projetos-caixa2">
+    
+    <div class="projetos-card2">
+      <div class="custom-video-player">
+        <a href="https://www.youtube.com/watch?v=cRWjao1ZiVA" target="_blank">
+          <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/cRWjao1ZiVA/maxresdefault.jpg" alt="Thumbnail do vídeo">
+            <button class="center-play vidro"></button>
+          </div>
+        </a>
+      </div>
+      <div class="caixa-textos-projetos1">
+        <h3 class="info-projetos2">Projeto Jean na Gringa</h3>
+        <p class="paragrafo-projetos2">Vídeo para Youtube</p>
+      </div>
+    </div>
+
+    <div class="projetos-card2">
+      <div class="custom-video-player">
+        <a href="https://www.youtube.com/watch?v=yWqPF4mGlqM" target="_blank">
+          <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/yWqPF4mGlqM/maxresdefault.jpg" alt="Thumbnail do vídeo">
+            <button class="center-play vidro"></button>
+          </div>
+        </a>
+      </div>
+      <div class="caixa-textos-projetos1">
+        <h3 class="info-projetos2">Lipezin</h3>
+        <p class="paragrafo-projetos2">Vídeo de Games</p>
+      </div>
+    </div>
+
+  </div> <!-- FECHA projetos-caixa2 -->
+</section>
+  </section>
+
+
+<section class="baners" id="banners">
+  <h2 class="baners-titulo">Banners de Vendas Online</h2>
+  <div class="baners-caixa">
+    <div class="baners-card">
+<div class="carousel">
+  <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+  
+  <div class="carousel-images">
+    <img src="./assets/img/MARVEL RIVALS.png" alt="Imagem 1" class="carousel-img active">
+    <img src="./assets/img/MARVEL RIVALS 15OFF.png" alt="Imagem 2" class="carousel-img">
+  </div>
+  
+  <button class="carousel-btn next" id="next-btn">&#10095;</button>
+  
+  <!-- Indicadores (bolinhas) -->
+  <div class="carousel-dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+  </div>
+</div>
+      </div>
+      <div class="baners-card">
+        <img src="./assets/img/marvel rivals serviços@1,25x.png" alt="Projeto 1" class="Projetos-imagem" />
+        <div class="info-projetos">
+          <p class="paragrafo-projetos">GG MAX/Discord Vendas</p>
+        </div>
+        <div class="caixa-textos-projetos">
+          <p>Serviços Marvel Rivals</p>
+        </div>
+      </div>
+      <div class="baners-card">
+        <img src="./assets/img/teste 2x2@2x.png" alt="Projeto 1" class="Projetos-imagem" />
+        <div class="info-projetos">
+          <p class="paragrafo-projetos">GG MAX/Discord Vendas</p>
+        </div>
+        <div class="caixa-textos-projetos">
+          <p>Edição de Vídeo</p>
+        </div>
+      </div>
+    </section>
+ 
 
 
   <section id="contato" class="Contato">
@@ -466,6 +592,50 @@
       botao.textContent = 'Mostrar mais';
     }
   });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.carousel-img');
+  const dots = document.querySelectorAll('.dot');
+  const totalImages = images.length;
+
+  // Função para mostrar imagem
+  function showImage(index) {
+    images.forEach(img => img.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    images[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  // Botão próximo
+  document.getElementById('next-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+  });
+
+  // Botão anterior
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    currentIndex = (currentIndezx - 1 + totalImages) % totalImages;
+    showImage(currentIndex);
+  });
+
+  // Clique nas bolinhas
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      showImage(currentIndex);
+    });
+  });
+
+  // Autoplay (troca automática a cada 3 segundos)
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+  }, 3000);
+});
 </script>
    
 <footer class="rodape">

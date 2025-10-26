@@ -60,7 +60,7 @@ html, body {
   opacity: 0.1;
 }
 
-/*.imagem-background {
+.imagem-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -76,7 +76,7 @@ html, body {
     url('./assets/img/background.jpg');
   background-blend-mode: overlay;
 }
-/
+
 
 /* Navegação */
 .navegacao {
@@ -98,7 +98,53 @@ html, body {
   z-index: 1000;
   border-width: 0.2px;
 }
+.dropdown {
+  position: relative;
+}
 
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+}
+
+
+/* MOSTRAR DROPDOWN NO HOVER */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding-left: 2rem;
+}
 .menu {
   justify-content: center;
   display: flex;
@@ -453,6 +499,7 @@ h4 {
   transition: all 0.5s ease;
   overflow: hidden;
   max-height: 700px;
+  
 }
 
 .projetos-card:hover,
@@ -460,7 +507,19 @@ h4 {
   box-shadow: 0 10px 20px rgba(246, 255, 246, 0.349);
   transform: translateY(-10px) scale(1.05);
 }
+.projetos-card1{
+    background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  max-height: 900px;
+  width: 50%;
 
+}
 
 .Projetos-imagem {
   width: 300px;
@@ -487,7 +546,19 @@ h4 {
   transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), filter 0.4s cubic-bezier(.4,0,.2,1);
   
 }
-
+.projetos-video1{
+  width: 100%;
+  max-height: 700px;
+  aspect-ratio: 9 / 16;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #000;
+  display: block;
+  border: 1px solid var(--vidro);
+  box-shadow: none;
+  transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), filter 0.4s cubic-bezier(.4,0,.2,1);
+  
+}
 /* Moldura do vídeo com sombra igual à imagem */
 .custom-video-player {
   width: 100%;
@@ -1124,7 +1195,6 @@ h4 {
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
   pointer-events: none; /* não bloqueia o clique */
 }
-</style>
 
 .rodape {
   text-align: center;
@@ -1148,4 +1218,303 @@ h4 {
 
 .email-link:hover {
   text-decoration: underline;
+}
+.empresa-secao {
+  margin-top: 100px; /* AUMENTADO - mais espaço antes */
+  margin-bottom: 80px; /* AUMENTADO */
+  padding-top: 60px; /* espaço interno no topo */
+  text-align: center;
+  position: relative;
+}
+
+/* Linha divisória acima do título (efeito quebra de página) */
+.empresa-secao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff88, transparent);
+}
+
+.empresa-titulo {
+  font-size: 3rem; /* AUMENTADO de 2rem para 3rem */
+  font-weight: bold;
+  color: #fff;
+  margin-top: 100px;
+  margin-bottom: 100px; /* AUMENTADO */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  letter-spacing: 2px; /* espaçamento entre letras */
+  text-transform: uppercase; /* todas maiúsculas (opcional) */
+}
+
+.empresa-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #00ff88;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px #00ff88; /* brilho na barra */
+}
+
+.empresa-titulo:hover::after {
+  width: 20%; /* AUMENTADO de 15% */
+}
+.Youtube {
+  margin-top: px; /* espaço antes da seção */
+  margin-bottom: 200px;
+  padding-top: 60px;
+  text-align: center;
+  position: relative;
+}
+
+/* Linha divisória acima do título */
+.Youtube::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff88, transparent);
+  
+}
+
+.Youtube-Titulo {
+  font-size: 3rem; /* AUMENTADO */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px; /* AUMENTADO */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* opcional */
+  margin-top: 100px;
+}
+
+.Youtube-Titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* tamanho inicial maior */
+  height: 4px;
+  background: #00ff88;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px #00ff88; /* brilho */
+}
+
+.Youtube-Titulo:hover::after {
+  width: 20%; /* AUMENTADO */
+}
+
+.baners-caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 3rem;
+  min-height: 100vh; /* ocupa toda altura da tela */
+}
+
+.baners-titulo {
+  font-size: 3rem; /* AUMENTADO */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px; /* AUMENTADO */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* opcional */
+  margin-top: 100px;
+}
+
+.baners-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px; /* largura máxima */
+}
+
+.baners-card:hover {
+  box-shadow: 0 10px 20px rgba(246, 255, 246, 0.349);
+  transform: translateY(-10px) scale(1.05);
+}
+
+.baners-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.info-baners {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.paragrafo-baners {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Linha divisória acima do título */
+.baners-titulo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff88, transparent);
+  margin-top: -100px;
+}
+
+.baners-titulo {
+  font-size: 3rem; /* AUMENTADO */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px; /* AUMENTADO */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* opcional */
+  margin-top: 100px;
+}
+
+.baners-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* tamanho inicial maior */
+  height: 4px;
+  background: #00ff88;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px #00ff88; /* brilho */
+}
+
+.baners-titulo:hover::after {
+  width: 20%; /* AUMENTADO */
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3); /* ADICIONE */
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 500px; /* ou ajuste para o tamanho que quiser */
+  display: flex; /* ADICIONE */
+  align-items: center; /* ADICIONE */
+  justify-content: center; /* ADICIONE */
+}
+
+.carousel-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* MUDE DE cover PARA contain */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  top: 0; /* ADICIONE */
+  left: 0; /* ADICIONE */
+}
+
+.carousel-img.active {
+  opacity: 1;
+  z-index: 1; /* ADICIONE */
+}
+
+/* Botões de seta */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 255, 136, 0.8); /* AUMENTEI OPACIDADE */
+  color: white;
+  border: none;
+  font-size: 1.5rem; /* DIMINUÍ */
+  padding: 0.8rem; /* DIMINUÍ */
+  cursor: pointer;
+  z-index: 100; /* AUMENTEI MUITO */
+  border-radius: 50%;
+  width: 45px; /* DIMINUÍ */
+  height: 45px; /* DIMINUÍ */
+  transition: all 0.3s ease;
+  display: flex; /* ADICIONE */
+  align-items: center; /* ADICIONE */
+  justify-content: center; /* ADICIONE */
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 255, 136, 1);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.carousel-btn.prev {
+  left: 10px; /* DIMINUÍ */
+}
+
+.carousel-btn.next {
+  right: 10px; /* DIMINUÍ */
+}
+
+/* Indicadores (bolinhas) */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100; /* AUMENTEI */
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #00ff88;
+  width: 30px;
+  border-radius: 6px;
 }
