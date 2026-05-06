@@ -173,7 +173,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      player.requestFullscreen?.();
+      video.controls = true;
+      video.requestFullscreen?.();
+    });
+
+    video.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        video.controls = false;
+      }
     });
   });
 
