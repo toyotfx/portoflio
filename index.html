@@ -2,648 +2,285 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5YCV80FDS4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5YCV80FDS4');
-  
-</script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Guilherme Toyota, editor de vídeo e designer gráfico para criadores, marcas e canais." />
   <title>Portfólio | Guilherme Toyota</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YCV80FDS4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5YCV80FDS4');
+  </script>
 </head>
 
 <body>
+  <div class="particulas" aria-hidden="true"></div>
 
+  <nav class="navegacao" aria-label="Navegação principal">
+    <a class="logo" href="#home">Toyota</a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"></button>
+    <ul class="menu" id="menu-principal">
+      <li><a href="#home" class="menu-link">Início</a></li>
+      <li><a href="#sobre" class="menu-link">Sobre</a></li>
+      <li><a href="#portfolio" class="menu-link">Portfólio</a></li>
+      <li><a href="#canais" class="menu-link">Canais</a></li>
+      <li><a href="#videos" class="menu-link">Vídeos</a></li>
+      <li><a href="#contato" class="menu-link">Contato</a></li>
+    </ul>
+  </nav>
 
-
-  <!-- Fundo -->
-  <div class="particulas"></div>
-
-
-  <!-- Navegação -->
-<nav class="navegacao">
-  <ul class="menu">
-    <li><a href="#home" class="menu-link">Início</a></li>
-    <li><a href="#sobre" class="menu-link">Sobre</a></li>
-    
-    <!-- MENU COM DROPDOWN -->
-    <li class="dropdown">
-      <a href="#projetos" class="menu-link">Projetos ▼</a>
-      <ul class="dropdown-menu">
-        <li><a href="#videos">Vídeos</a></li>
-        <li><a href="#banners">Banners</a></li>
-        <li><a href="#youtube">Youtube</a></li>
-        <li><a href="#angelo-lubrificantes">Angelo Lubrificantes</a></li>
-        <li><a href="#imagens">Imagens</a></li>
-      </ul>
-    </li>
-    
-    <li><a href="#contato" class="menu-link">Contato</a></li>
-  </ul>
-</nav>
-
-  <!-- Cabeçalho -->
-  <header id="home" class="cabecalho">
-    <img src="./assets/img/profile.jpg" alt="Foto de Perfil" class="foto-perfil" />
-    <h1>Guilherme</h1>
-    <h4>Editor - Designer gráfico</h4>
-<p class="contato-info">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icone" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5z"/>
-  </svg>
-  <a href="https://instagram.com/gpstocker" class="contato-link" target="_blank">@gpstocker</a>
-</p>
-
-<p class="contato-info">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icone" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-    <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 13l8-8.99V4H4zm16 2.83-6.18 6.95a2 2 0 0 1-2.64 0L4 6.83V20h16V6.83z"/>
-  </svg>
-  <a href="mailto:toyot.fx@gmail.com" class="contato-link">toyot.fx@gmail.com</a>
-</p>
-
-  </header>
-
-  <!-- Seção Sobre -->
-  <section id="sobre" class="sobre">
-  <h2 class="sobre-titulo">Sobre Mim</h2>
-  
-  <div class="sobre-caixa">
-    <p id="texto-sobre" class="sobre-paragrafo texto-resumido">
-      Olá! Sou Guilherme, editor e designer gráfico, focado em transformar ideias em imagens e vídeos que chamam atenção.
-      <br>Com formação pelo Instituto Federal Sul-Rio-Grandense e experiência em projetos que já alcançaram milhares de visualizações, ajudo empresas, criadores e marcas a se destacarem com conteúdo profissional e criativo.
-    </p>
-    <button id="toggle-btn" class="botao-toggle">Mostrar mais</button>
-  </div>
-<div class="container">
-<p class="sobre-paragrafo2">
-  Precisa de um <strong>visual que impressiona?</strong>
-  Confira meu <strong>portfólio</strong> e vamos criar algo incrível juntos!
-</p>
-  </section>
-
-  <!-- Seção Projetos -->
-  <section id="projetos" class="Projetos">
-    <h2 class="Projetos-Titulo">Meus Projetos</h2>
-    <div class="projetos-caixa">
-      <div class="projetos-card">
-        <img src="./assets/img/project-01.png" alt="Projeto 1" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">Projeto 1</p>
+  <main>
+    <header id="home" class="cabecalho">
+      <div class="hero-media">
+        <img src="assets/img/profile.jpg" alt="Foto de Guilherme Toyota" class="foto-perfil" />
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Editor de vídeo e designer gráfico</p>
+        <h1><span>Guilherme</span><span>Toyota</span></h1>
+        <p class="hero-text">
+          Transformo cortes, thumbnails, posts e campanhas em conteúdo claro, rápido e com cara profissional para criadores e marcas.
+        </p>
+        <div class="hero-actions">
+          <a class="botao botao-principal" href="#canais">Ver canais</a>
+          <a class="botao botao-secundario" href="#contato">Pedir orçamento</a>
         </div>
-        <div class="caixa-textos-projetos">
-          <p>Stop-rolling, catch-eye post</p>
+        <div class="contatos-rapidos" aria-label="Contatos rápidos">
+          <a href="https://instagram.com/gpstocker" target="_blank" rel="noopener">@gpstocker</a>
+          <a href="mailto:toyot.fx@gmail.com">toyot.fx@gmail.com</a>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="./assets/img/project-04..png" alt="Projeto 1" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">Projeto 2</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>High-Quality Post</p>
-        </div>
+    </header>
+
+    <section id="sobre" class="secao sobre">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Conteúdo visual para prender atenção</h2>
       </div>
-      <div class="projetos-card">
-        <img src="./assets/img/project-03.png" alt="Projeto 1" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">Projeto 3</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Panfleto, flyer, post digital</p>
-        </div>
+      <div class="sobre-grid">
+        <p>
+          Sou Guilherme, editor e designer gráfico. Trabalho com vídeos curtos, conteúdos para YouTube, peças para redes sociais, banners e materiais comerciais.
+        </p>
+        <p>
+          Meu foco é deixar cada projeto direto ao ponto: boa leitura visual, ritmo, impacto nos primeiros segundos e acabamento que combina com a identidade de cada cliente.
+        </p>
       </div>
-
-      <div class="projetos-card">
-        <img src="./assets/img/project-05.jpg" alt="Projeto 4" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">Carrossel</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Carrosseis para o instagram</p>
-        </div>
-      </div>
-
-            <div class="projetos-card">
-        <img src="./assets/img/imagem 2.png" alt="Projeto 5" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">Post instagram</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Post Instagram sobre jogos.</p>
-        </div>
-      </div>
-
-                <div class="projetos-card">
-        <img src="./assets/img/JAPAO 2MB2.jpg" alt="Projeto 5" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">GFX</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Banners personalizados.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Repita para outros projetos -->
-    </div>
-
     </section>
-    <section id="Videos" class="Projetos">
-      <h2 class="Projetos-Titulo">Vídeos</h2>
-      <div class="projetos-caixa1">
 
-
-
-        <div class="projetos-card1">
-          <div class="custom-video-player">
-            <video class="Projetos-video" id="video-01">
-              <source src="./assets/video/video-01.mp4" type="video/mp4">
-              Seu navegador não suporta a reprodução de vídeos.
-            </video>
-            <button class="center-play vidro" id="center-play-01"></button>
-            <div class="video-controls">
-              <div class="progress-bar-container">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-neon" id="progress-01"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caixa-textos-projetos1">
-            <h3 class="info-projetos1">Projeto de Vídeo 1</h3>
-            <p class="paragrafo-projetos1">Edição criativa com foco em storytelling e ritmo visual.</p>
-          </div>
-        </div>
-
-
-
-        <div class="projetos-card1">
-          <div class="custom-video-player">
-            <video class="Projetos-video" id="video-02">
-              <source src="./assets/video/video-02.MP4" type="video/mp4">
-              Seu navegador não suporta a reprodução de vídeos.
-            </video>
-            <button class="center-play vidro" id="center-play-02"></button>
-            <div class="video-controls">
-              <div class="progress-bar-container">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-neon" id="progress-02"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caixa-textos-projetos1">
-            <h3 class="info-projetos1">Projeto de Vídeo 2</h3>
-            <p class="paragrafo-projetos1">Lyrics</p>
-          </div>
-        </div>
-
-
-
-        <div class="projetos-card1">
-          <div class="custom-video-player">
-            <video class="Projetos-video" id="video-03">
-              <source src="./assets/video/video-03.mp4" type="video/mp4">
-              Seu navegador não suporta a reprodução de vídeos.
-            </video>
-            <button class="center-play vidro" id="center-play-03"></button>
-            <div class="video-controls">
-              <div class="progress-bar-container">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-neon" id="progress-03"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caixa-textos-projetos1">
-            <h3 class="info-projetos1">Projeto de Vídeo 3</h3>
-            <p class="paragrafo-projetos1">Lyrics Vídeo</p>
-          </div>
-        </div>
-</div>
-
-    </section>
-<section>  
-       <div class="projetos-caixa2">
-
-        <div class="projetos-card2">
-          <div class="custom-video-player">
-            <video class="Projetos-video2" id="video-04">
-              <source src="./assets/video/video-04.mp4" type="video/mp4">
-            </video>
-            <button class="center-play vidro" id="center-play-04"></button>
-            <div class="video-controls">
-              <div class="progress-bar-container">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-neon" id="progress-04"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caixa-textos-projetos1">
-            <h3 class="info-projetos2">Projeto de Vídeo 4</h3>
-            <p class="paragrafo-projetos2">Intro Viral Youtube</p>
-          </div>
-        </div>
-
-                <div class="projetos-card2">
-          <div class="custom-video-player">
-            <video class="Projetos-video2" id="video-05">
-              <source src="./assets/video/video-05..mov" type="video/mp4" poster="assets/img/image.png">
-              Seu navegador não suporta a reprodução de vídeos.
-            </video>
-            <button class="center-play vidro" id="center-play-05"></button>
-            <div class="video-controls">
-              <div class="progress-bar-container">
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-neon" id="progress-05"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="caixa-textos-projetos1">
-            <h3 class="info-projetos2">Projeto de Vídeo 5</h3>
-            <p class="paragrafo-projetos2">Propaganda Comercial</p>
-          </div>
-         </div>
-
-</section>
-<section id="angelo-lubrificantes" class="angelo-lubrificantes">
-  <!-- SEÇÃO ANGELO LUBRIFICANTES -->
-  <div class="empresa-secao">
-    <h2 class="empresa-titulo">Angelo Lubrificantes</h2>
-    
-    <div class="projetos-caixa">
-      <div class="projetos-card1">
-        <div class="custom-video-player">
-          <video class="projetos-video1" id="video-angelo-01">
-            <source src="./assets/video/não finalizado 2.mp4" type="video/mp4">
-          </video>
-          <button class="center-play vidro" id="center-play-angelo-01"></button>
-          <div class="video-controls">
-            <div class="progress-bar-container">
-              <div class="progress-bar-bg">
-                <div class="progress-bar-neon" id="progress-angelo-01"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="caixa-textos-projetos1">
-          <h3 class="info-projetos2">Campanha Institucional</h3>
-          <p class="paragrafo-projetos2">Vídeo promocional Angelo</p>
-        </div>
+    <section id="portfolio" class="secao">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Design e peças visuais</p>
+        <h2>Projetos selecionados</h2>
       </div>
-  <div class="projetos-card1">
-        <div class="custom-video-player">
-          <video class="projetos-video1" id="video-angelo-02">
-            <source src="./assets/video/ANGELO FINALIZADO real.mp4" type="video/mp4">
-          </video>
-          <button class="center-play vidro" id="center-play-angelo-02"></button>
-          <div class="video-controls">
-            <div class="progress-bar-container">
-              <div class="progress-bar-bg">
-                <div class="progress-bar-neon" id="progress-angelo-02"></div>
-              </div>
-            </div>
+      <div class="grade-projetos">
+        <article class="projeto-card">
+          <img src="assets/img/project-01.png" alt="Post promocional com composição visual chamativa" />
+          <div>
+            <h3>Post de impacto</h3>
+            <p>Peça para redes sociais com foco em parar o scroll e destacar a oferta.</p>
           </div>
-        </div>
-        <div class="caixa-textos-projetos1">
-          <h3 class="info-projetos2">Campanha Institucional</h3>
-          <p class="paragrafo-projetos2">Vídeo promocional Angelo</p>
-        </div>
-      <!-- Adicione mais vídeos da Angelo aqui -->
-    </div>
-  </div>
-  <section>
-<section id="youtube" class="youtube">
-  <div class="Youtube">
-    <h2 class="Youtube-Titulo">Youtube</h2>
-  </div>
- <div class="projetos-caixa2">
-    
-    <div class="projetos-card2">
-      <div class="custom-video-player">
-        <a href="https://www.youtube.com/watch?v=cRWjao1ZiVA" target="_blank">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/cRWjao1ZiVA/maxresdefault.jpg" alt="Thumbnail do vídeo">
-            <button class="center-play vidro"></button>
+        </article>
+        <article class="projeto-card">
+          <img src="assets/img/project-04..png" alt="Arte gráfica de alta qualidade para redes sociais" />
+          <div>
+            <h3>Arte social media</h3>
+            <p>Visual polido para divulgação, com hierarquia clara e leitura rápida.</p>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <img src="assets/img/project-03.png" alt="Flyer digital com informações organizadas" />
+          <div>
+            <h3>Flyer digital</h3>
+            <p>Material para panfleto, divulgação e publicação em canais digitais.</p>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <img src="assets/img/project-05.jpg" alt="Layout de carrossel para Instagram" />
+          <div>
+            <h3>Carrossel Instagram</h3>
+            <p>Sequência visual para explicar, vender ou apresentar uma ideia.</p>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <img src="assets/img/imagem 2.png" alt="Post de Instagram sobre jogos" />
+          <div>
+            <h3>Conteúdo gamer</h3>
+            <p>Post temático para público de jogos, com visual energético e legível.</p>
+          </div>
+        </article>
+        <article class="projeto-card">
+          <img src="assets/img/JAPAO 2MB2.jpg" alt="Banner personalizado com estética japonesa" />
+          <div>
+            <h3>Banner personalizado</h3>
+            <p>GFX e composições para perfis, canais, capas e divulgações.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="canais" class="secao canais">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Canais e clientes</p>
+        <h2>Projetos de conteúdo que cuido ou já cuidei</h2>
+      </div>
+      <div class="grade-canais">
+        <a class="canal-card youtube-card" href="https://www.youtube.com/@CortesdoToyota" target="_blank" rel="noopener">
+          <span class="canal-plataforma">YouTube</span>
+          <h3>@CortesdoToyota</h3>
+          <p>Canal próprio com foco em cortes, ritmo de retenção e conteúdo curto para audiência digital.</p>
+          <span class="canal-acao">Abrir canal</span>
+        </a>
+        <a class="canal-card youtube-card" href="https://www.youtube.com/@Marc%C3%A3oCortesBR" target="_blank" rel="noopener">
+          <span class="canal-plataforma">YouTube</span>
+          <h3>@MarcãoCortesBR</h3>
+          <p>Canal de cliente com edição de cortes e conteúdo pensado para distribuição rápida.</p>
+          <span class="canal-acao">Abrir canal</span>
+        </a>
+        <a class="canal-card instagram-card" href="https://www.instagram.com/doishomensemeio.clips/" target="_blank" rel="noopener">
+          <span class="canal-plataforma">Instagram</span>
+          <h3>@Doishomensemeio.clips</h3>
+          <p>Página de clips para Instagram, com foco em cortes verticais e consumo mobile.</p>
+          <span class="canal-acao">Abrir página</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="videos" class="secao">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Edição de vídeo</p>
+        <h2>Vídeos e campanhas</h2>
+      </div>
+      <div class="grade-videos">
+        <article class="video-card vertical">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/video-01.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Vídeo curto</h3>
+          <p>Edição criativa com foco em storytelling e ritmo visual.</p>
+        </article>
+        <article class="video-card vertical">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/video-02.MP4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Lyrics</h3>
+          <p>Composição visual para acompanhar música e dar dinâmica ao conteúdo.</p>
+        </article>
+        <article class="video-card vertical">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/video-03.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Lyrics vídeo</h3>
+          <p>Ritmo, cortes e elementos visuais sincronizados com o áudio.</p>
+        </article>
+        <article class="video-card horizontal">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/video-04.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Intro viral YouTube</h3>
+          <p>Abertura rápida para prender atenção logo no começo do vídeo.</p>
+        </article>
+        <article class="video-card horizontal">
+          <video controls preload="metadata" playsinline poster="assets/img/image.png">
+            <source src="assets/video/video-05..mov" type="video/quicktime" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Propaganda comercial</h3>
+          <p>Peça de divulgação com linguagem de venda e apresentação do serviço.</p>
+        </article>
+        <article class="video-card vertical">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video/ANGELO FINALIZADO real.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+          <h3>Angelo Lubrificantes</h3>
+          <p>Vídeo promocional institucional para cliente.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="youtube" class="secao">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">YouTube</p>
+        <h2>Trabalhos publicados</h2>
+      </div>
+      <div class="grade-youtube">
+        <a class="youtube-video" href="https://www.youtube.com/watch?v=cRWjao1ZiVA" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/cRWjao1ZiVA/maxresdefault.jpg" alt="Thumbnail do vídeo Projeto Jean na Gringa" />
+          <div>
+            <h3>Projeto Jean na Gringa</h3>
+            <p>Vídeo para YouTube com edição e acabamento para retenção.</p>
+          </div>
+        </a>
+        <a class="youtube-video" href="https://www.youtube.com/watch?v=yWqPF4mGlqM" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/yWqPF4mGlqM/maxresdefault.jpg" alt="Thumbnail do vídeo Lipezin" />
+          <div>
+            <h3>Lipezin</h3>
+            <p>Vídeo de games com linguagem rápida e visual de internet.</p>
           </div>
         </a>
       </div>
-      <div class="caixa-textos-projetos1">
-        <h3 class="info-projetos2">Projeto Jean na Gringa</h3>
-        <p class="paragrafo-projetos2">Vídeo para Youtube</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="projetos-card2">
-      <div class="custom-video-player">
-        <a href="https://www.youtube.com/watch?v=yWqPF4mGlqM" target="_blank">
-          <div class="video-thumbnail">
-            <img src="https://img.youtube.com/vi/yWqPF4mGlqM/maxresdefault.jpg" alt="Thumbnail do vídeo">
-            <button class="center-play vidro"></button>
+    <section id="banners" class="secao">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Vendas online</p>
+        <h2>Banners e ofertas</h2>
+      </div>
+      <div class="grade-banners">
+        <article class="banner-card destaque">
+          <div class="carousel" aria-label="Banners Marvel Rivals">
+            <button class="carousel-btn prev" type="button" aria-label="Banner anterior">‹</button>
+            <img src="assets/img/MARVEL RIVALS.png" alt="Banner de venda Marvel Rivals" class="carousel-img active" />
+            <img src="assets/img/MARVEL RIVALS 15OFF.png" alt="Banner promocional Marvel Rivals com desconto" class="carousel-img" />
+            <button class="carousel-btn next" type="button" aria-label="Próximo banner">›</button>
           </div>
-        </a>
-      </div>
-      <div class="caixa-textos-projetos1">
-        <h3 class="info-projetos2">Lipezin</h3>
-        <p class="paragrafo-projetos2">Vídeo de Games</p>
-      </div>
-    </div>
-
-  </div> <!-- FECHA projetos-caixa2 -->
-</section>
-  </section>
-
-
-<section class="baners" id="banners">
-  <h2 class="baners-titulo">Banners de Vendas Online</h2>
-  <div class="baners-caixa">
-    <div class="baners-card">
-<div class="carousel">
-  <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
-  
-  <div class="carousel-images">
-    <img src="./assets/img/MARVEL RIVALS.png" alt="Imagem 1" class="carousel-img active">
-    <img src="./assets/img/MARVEL RIVALS 15OFF.png" alt="Imagem 2" class="carousel-img">
-  </div>
-  
-  <button class="carousel-btn next" id="next-btn">&#10095;</button>
-  
-  <!-- Indicadores (bolinhas) -->
-  <div class="carousel-dots">
-    <span class="dot active" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-  </div>
-</div>
-      </div>
-      <div class="baners-card">
-        <img src="./assets/img/marvel rivals serviços@1,25x.png" alt="Projeto 1" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">GG MAX/Discord Vendas</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Serviços Marvel Rivals</p>
-        </div>
-      </div>
-      <div class="baners-card">
-        <img src="./assets/img/teste 2x2@2x.png" alt="Projeto 1" class="Projetos-imagem" />
-        <div class="info-projetos">
-          <p class="paragrafo-projetos">GG MAX/Discord Vendas</p>
-        </div>
-        <div class="caixa-textos-projetos">
-          <p>Edição de Vídeo</p>
-        </div>
+          <h3>GG MAX / Discord Vendas</h3>
+          <p>Banner de oferta para conversão em comunidades e marketplaces.</p>
+        </article>
+        <article class="banner-card">
+          <img src="assets/img/marvel rivals serviços@1,25x.png" alt="Banner de serviços Marvel Rivals" />
+          <h3>Serviços Marvel Rivals</h3>
+          <p>Arte de serviço para venda online.</p>
+        </article>
+        <article class="banner-card">
+          <img src="assets/img/teste 2x2@2x.png" alt="Banner de edição de vídeo" />
+          <h3>Edição de vídeo</h3>
+          <p>Peça comercial para divulgar serviço de edição.</p>
+        </article>
       </div>
     </section>
- 
 
-
-  <section id="contato" class="Contato">
-    <h2 class="Contato-Titulo">Entre em Contato</h2>
-    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-      <div class="grupo-formulario">
-        <input type="text" name="nome" placeholder="Seu Nome" class="input-nome" required id="nome">
+    <section id="contato" class="secao contato">
+      <div class="secao-cabecalho">
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos criar algo com cara profissional</h2>
       </div>
-      <div>
-        <textarea class="mensagem" placeholder="Digite Sua Mensagem" rows="4" id="mensagem"></textarea>
-      </div>
-      <button type="submit" class="botao-form">Enviar Whatsapp</button>
-    </form>
-  </section>
+      <form class="formulario-contato" id="formulario">
+        <label>
+          <span>Nome</span>
+          <input type="text" name="nome" placeholder="Seu nome" required id="nome" />
+        </label>
+        <label>
+          <span>Mensagem</span>
+          <textarea placeholder="Digite sua mensagem" rows="4" id="mensagem" required></textarea>
+        </label>
+        <button type="submit" class="botao-form">Enviar no WhatsApp</button>
+      </form>
+    </section>
+  </main>
 
-  </div>
+  <footer class="rodape">
+    <p>&copy; 2026 Guilherme Toyota. Todos os direitos reservados.</p>
+  </footer>
 
-
-
-  <script>
-    function enviarWhats(event) {
-      event.preventDefault();
-
-      const nome = document.getElementById('nome');
-      const mensagem = document.getElementById('mensagem');
-      const telefone = '5553999133813';
-      const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
-      const msgFormatada = encodeURIComponent(texto);
-      const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
-
-      window.open(url, '_blank');
-    }
-  </script>
-
-
-
-
-    <script src="player.js"></script>
-    <script>
-      // Scroll suave ao clicar nos links da navbar
-      document.querySelectorAll('.menu-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
-          if (href && href.startsWith('#')) {
-            const target = document.querySelector(href);
-            if (target) {
-              e.preventDefault();
-              target.scrollIntoView({ behavior: 'smooth' });
-            }
-          }
-        });
-      });
-    </script>
-  
-  <div class="spotify-player1" id="player1">
-        <!-- Botão de Minimizar -->
-        <button class="minimize-btn1" id="minimizeBtn1">−</button>
-        
-        <!-- Capa do Álbum -->
-        <img src="assets/img/image (1).webp" alt="Capa do Álbum" class="cover1">
-        
-        <!-- Informações e Controles -->
-        <div class="info1">
-            <h3 class="title1">Lumière</h3>
-            <p class="artist1">Lorien Testard</p>
-            <input type="range" id="progress1" class="progress1" value="0" step="1" min="0" max="100">
-            <div class="controls1">
-                <button id="play1" class="play-button1">▶</button>
-                <button id="pause1" class="pause-button1" style="display: none;">⏸</button>
-            </div>
-        </div>
-        
-        <!-- Elemento de Áudio -->
-        <audio id="audio1" preload="metadata">
-            <source src="assets/video/Lumière.mp4" type="audio/mp4">
-            <source src="Lumière.mp3" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
-    </div>
- 
-        <script>
-        // Aguarda o DOM estar completamente carregado
-        document.addEventListener('DOMContentLoaded', function() {
-            // Elementos do DOM
-            const audio = document.getElementById("audio1");
-            const playBtn = document.getElementById("play1");
-            const pauseBtn = document.getElementById("pause1");
-            const progress = document.getElementById("progress1");
-            const player = document.getElementById("player1");
-            const minimizeBtn = document.getElementById("minimizeBtn1");
-
-            // Verificar se todos os elementos foram encontrados
-            if (!audio || !playBtn || !pauseBtn || !progress || !player || !minimizeBtn) {
-                console.error('Alguns elementos não foram encontrados no DOM');
-                return;
-            }
-
-            // Configurações iniciais
-            audio.volume = 0.05;
-            audio.muted = false;
-
-            // Controles de Play/Pause
-            playBtn.addEventListener("click", function(e) {
-                e.stopPropagation();
-                const playPromise = audio.play();
-                
-                if (playPromise !== undefined) {
-                    playPromise.then(function() {
-                        playBtn.style.display = "none";
-                        pauseBtn.style.display = "inline-block";
-                    }).catch(function(error) {
-                        console.error('Erro ao reproduzir áudio:', error);
-                        alert('Erro ao reproduzir áudio. Verifique se o arquivo existe.');
-                    });
-                }
-            });
-
-            pauseBtn.addEventListener("click", function(e) {
-                e.stopPropagation();
-                audio.pause();
-                pauseBtn.style.display = "none";
-                playBtn.style.display = "inline-block";
-            });
-
-            // Barra de Progresso
-            audio.addEventListener("timeupdate", function() {
-                if (audio.duration) {
-                    const percent = (audio.currentTime / audio.duration) * 100;
-                    progress.value = percent;
-                }
-            });
-
-            progress.addEventListener("input", function() {
-                if (audio.duration) {
-                    const time = (progress.value / 100) * audio.duration;
-                    audio.currentTime = time;
-                }
-            });
-
-            // Minimizar/Maximizar
-            minimizeBtn.addEventListener("click", function(e) {
-                e.stopPropagation();
-                player.classList.toggle("minimized1");
-                minimizeBtn.textContent = player.classList.contains("minimized1") ? "+" : "−";
-            });
-
-            // Clicar no player minimizado para maximizar
-            player.addEventListener("click", function() {
-                if (player.classList.contains("minimized1")) {
-                    player.classList.remove("minimized1");
-                    minimizeBtn.textContent = "−";
-                }
-            });
-
-            // Evento quando o áudio termina
-            audio.addEventListener("ended", function() {
-                pauseBtn.style.display = "none";
-                playBtn.style.display = "inline-block";
-                progress.value = 0;
-            });
-
-            // Tratamento de erros
-            audio.addEventListener("error", function(e) {
-                console.error('Erro no áudio:', e);
-                alert('Erro ao carregar o arquivo de áudio. Verifique se o arquivo existe e o caminho está correto.');
-            });
-
-            // Debug: Log quando o áudio é carregado
-            audio.addEventListener("loadedmetadata", function() {
-                console.log('Áudio carregado com sucesso');
-                console.log('Duração:', audio.duration);
-            });
-        });
-    </script>
-      
-<script>
-  const texto = document.getElementById('texto-sobre');
-  const botao = document.getElementById('toggle-btn');
-
-  botao.addEventListener('click', () => {
-    texto.classList.toggle('texto-expandido');
-    if (texto.classList.contains('texto-expandido')) {
-      botao.textContent = 'Mostrar menos';
-    } else {
-      botao.textContent = 'Mostrar mais';
-    }
-  });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  let currentIndex = 0;
-  const images = document.querySelectorAll('.carousel-img');
-  const dots = document.querySelectorAll('.dot');
-  const totalImages = images.length;
-
-  // Função para mostrar imagem
-  function showImage(index) {
-    images.forEach(img => img.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
-    images[index].classList.add('active');
-    dots[index].classList.add('active');
-  }
-
-  // Botão próximo
-  document.getElementById('next-btn').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalImages;
-    showImage(currentIndex);
-  });
-
-  // Botão anterior
-  document.getElementById('prev-btn').addEventListener('click', () => {
-    currentIndex = (currentIndezx - 1 + totalImages) % totalImages;
-    showImage(currentIndex);
-  });
-
-  // Clique nas bolinhas
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      currentIndex = index;
-      showImage(currentIndex);
-    });
-  });
-
-  // Autoplay (troca automática a cada 3 segundos)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalImages;
-    showImage(currentIndex);
-  }, 3000);
-});
-</script>
-   
-<footer class="rodape">
-  <p>&copy; 2025 Guilherme. Todos os direitos reservados.</p>
-</footer>
-
-    
-
+  <script src="player.js"></script>
 </body>
 
 </html>

@@ -1,101 +1,64 @@
-function setupCustomPlayer(videoId, playBtnId, progressId) {
-  const video = document.getElementById(videoId);
-  const playBtn = document.getElementById(playBtnId);
-  const progress = document.getElementById(progressId);
-  const progressBarBg = progress.parentElement;
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
 
-  // Show/hide play button
-  function updatePlayBtn() {
-    if (video.paused) {
-      playBtn.classList.remove('hide');
-    } else {
-      playBtn.classList.add('hide');
-    }
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('aberto');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('aberto');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
-  // Play/pause logic
-  playBtn.addEventListener('click', () => {
-    video.play();
-  });
-  video.addEventListener('click', () => {
-    if (!video.paused) {
-      video.pause();
-    }
-  });
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
 
-  video.addEventListener('play', updatePlayBtn);
-  video.addEventListener('pause', updatePlayBtn);
-
-  // Progress bar update
-  video.addEventListener('timeupdate', () => {
-    const percent = (video.currentTime / video.duration) * 100 || 0;
-    progress.style.width = percent + '%';
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 
-  // Seek on progress bar click
-  progressBarBg.addEventListener('click', (e) => {
-    const rect = progressBarBg.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const percent = x / rect.width;
-    video.currentTime = percent * video.duration;
-  });
+  const form = document.getElementById('formulario');
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-  // Hide play button on start
-  updatePlayBtn();
-}
+      const nome = document.getElementById('nome').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const telefone = '5553999133813';
+      const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+      const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
-// Setup all players após o DOM estar pronto
-document.addEventListener('DOMContentLoaded', () => {
-  setupCustomPlayer('video-01', 'center-play-01', 'progress-01');
-  setupCustomPlayer('video-02', 'center-play-02', 'progress-02');
-  setupCustomPlayer('video-03', 'center-play-03', 'progress-03');
-  setupCustomPlayer('video-04', 'center-play-04', 'progress-04');
-  setupCustomPlayer('video-05', 'center-play-05', 'progress-05');
-});
-setupCustomPlayer('video-03', 'center-play-03', 'progress-03');
+      window.open(url, '_blank', 'noopener');
+    });
+  }
 
-setupCustomPlayer('video-angelo-01', 'center-play-angelo-01', 'progress-angelo-01');
-  setupCustomPlayer('video-angelo-02', 'center-play-angelo-02', 'progress-angelo-02');
-  setupCustomPlayer('video-outraempresa-01', 'center-play-outraempresa-01', 'progress-outraempresa-01');
+  document.querySelectorAll('.carousel').forEach((carousel) => {
+    const images = Array.from(carousel.querySelectorAll('.carousel-img'));
+    const prev = carousel.querySelector('.prev');
+    const next = carousel.querySelector('.next');
+    let currentIndex = 0;
 
+    if (images.length < 2) return;
 
+    const showImage = (index) => {
+      currentIndex = (index + images.length) % images.length;
+      images.forEach((image, imageIndex) => {
+        image.classList.toggle('active', imageIndex === currentIndex);
+      });
+    };
 
-  let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-img');
-const dots = document.querySelectorAll('.dot');
-const totalImages = images.length;
+    prev?.addEventListener('click', () => showImage(currentIndex - 1));
+    next?.addEventListener('click', () => showImage(currentIndex + 1));
 
-// Função para mostrar imagem
-function showImage(index) {
-  images.forEach(img => img.classList.remove('active'));
-  dots.forEach(dot => dot.classList.remove('active'));
-  
-  images[index].classList.add('active');
-  dots[index].classList.add('active');
-}
-
-// Botão próximo
-document.getElementById('next-btn').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalImages;
-  showImage(currentIndex);
-});
-
-// Botão anterior
-document.getElementById('prev-btn').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-  showImage(currentIndex);
-});
-
-// Clique nas bolinhas
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    showImage(currentIndex);
+    setInterval(() => showImage(currentIndex + 1), 4000);
   });
 });
-
-// Autoplay (troca automática a cada 3 segundos)
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % totalImages;
-  showImage(currentIndex);
-}, 3000); // 3000ms = 3 segundos
