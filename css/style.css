@@ -1157,3 +1157,78 @@ h1 span {
     padding: 18px;
   }
 }
+
+/* Hero limpo restaurado após remover a capa estilo poster. */
+.cabecalho {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 132px 0 80px;
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 88px);
+  overflow: visible;
+}
+
+.hero-media {
+  position: relative;
+  min-width: 0;
+}
+
+.foto-perfil {
+  position: relative;
+  width: min(420px, 100%);
+  height: auto;
+  aspect-ratio: 1;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--sombra);
+}
+
+h1 {
+  max-width: 720px;
+  color: var(--texto);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  text-shadow: none;
+}
+
+@media (max-width: 920px) {
+  .cabecalho {
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+    padding-top: 124px;
+  }
+
+  .hero-copy {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .cabecalho {
+    width: calc(100% - 28px);
+    max-width: 520px;
+    grid-template-columns: 1fr;
+    padding: 104px 0 56px;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    grid-column: auto;
+  }
+
+  .foto-perfil {
+    width: min(100%, 360px);
+    height: auto;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 13vw, 3rem);
+  }
+}
