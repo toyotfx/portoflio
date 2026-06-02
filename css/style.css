@@ -1232,3 +1232,249 @@ h1 {
     font-size: clamp(2.45rem, 13vw, 3rem);
   }
 }
+
+/* Refinamento final: visual mais claro, profissional e leve. */
+:root {
+  --verde: #22df76;
+  --fundo: #101816;
+  --fundo-2: #16221f;
+  --texto: #fbfff9;
+  --texto-fraco: #d2ddd6;
+  --borda: rgba(255, 255, 255, 0.18);
+  --vidro: rgba(255, 255, 255, 0.075);
+  --sombra: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(16, 24, 22, 0.72), rgba(16, 24, 22, 0.92)),
+    url('../assets/img/background.jpg') center / cover;
+  color: var(--texto);
+}
+
+main {
+  background: linear-gradient(180deg, transparent 0, rgba(255, 255, 255, 0.03) 38%, transparent 100%);
+}
+
+.particulas {
+  opacity: 0.55;
+  background:
+    linear-gradient(115deg, rgba(34, 223, 118, 0.2), transparent 34%),
+    linear-gradient(290deg, rgba(255, 215, 95, 0.1), transparent 34%);
+}
+
+.navegacao {
+  background: rgba(8, 14, 12, 0.9);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cabecalho {
+  min-height: 92vh;
+}
+
+.foto-perfil {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-media::before {
+  border-color: rgba(34, 223, 118, 0.62);
+}
+
+.eyebrow {
+  color: #56f49a;
+}
+
+.hero-text,
+.secao-descricao {
+  color: var(--texto-fraco);
+}
+
+.secao-descricao {
+  max-width: 660px;
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.sobre-grid p,
+.projeto-card,
+.canal-card,
+.video-card,
+.youtube-video,
+.banner-card,
+.formulario-contato {
+  background: rgba(255, 255, 255, 0.085);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+}
+
+.projeto-card,
+.canal-card,
+.video-card,
+.youtube-video,
+.banner-card {
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.projeto-card:hover,
+.canal-card:hover,
+.video-card:hover,
+.youtube-video:hover,
+.banner-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(34, 223, 118, 0.5);
+  transform: translateY(-3px);
+}
+
+.videos-section .secao-cabecalho {
+  max-width: 860px;
+}
+
+.video-shell {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 13px;
+  padding: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(3, 8, 6, 0.88)),
+    linear-gradient(135deg, rgba(34, 223, 118, 0.24), rgba(255, 215, 95, 0.12)),
+    #0d1512;
+}
+
+.video-card.horizontal .video-shell,
+.video-shell[data-orientation="horizontal"] {
+  min-height: 260px;
+}
+
+.video-shell span {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(34, 223, 118, 0.14);
+  color: #83ffb4;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.video-shell strong {
+  color: var(--texto);
+  font-size: 1.45rem;
+  line-height: 1.05;
+}
+
+.video-shell p {
+  padding: 0;
+  color: var(--texto-fraco);
+}
+
+.video-shell button,
+.video-shell a {
+  width: fit-content;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--verde);
+  color: #07110c;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.portfolio-video {
+  width: 100%;
+  background: #000;
+}
+
+.portfolio-video[data-orientation="vertical"],
+.video-card.vertical .portfolio-video {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+}
+
+.portfolio-video[data-orientation="horizontal"],
+.video-card.horizontal .portfolio-video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.video-placeholder {
+  display: none;
+}
+
+.processo,
+.poster-hero,
+.hero-paper,
+.hero-topline,
+.hero-title-block,
+.hero-portrait-wrap,
+.portrait-note {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  .cabecalho {
+    min-height: auto;
+  }
+
+  .video-shell {
+    min-height: 360px;
+  }
+
+  .video-card.horizontal .video-shell,
+  .video-shell[data-orientation="horizontal"] {
+    min-height: 220px;
+  }
+}
+
+/* Ajuste de clareza: remove o aspecto acinzentado/opaco do fundo. */
+body {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(34, 223, 118, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 8%, rgba(255, 215, 95, 0.08), transparent 24%),
+    linear-gradient(180deg, #17211e 0%, #0f1714 46%, #0b100e 100%);
+}
+
+.particulas {
+  opacity: 0.35;
+}
+
+.cabecalho {
+  min-height: 820px;
+}
+
+.secao {
+  position: relative;
+}
+
+.secao::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+}
+
+.sobre-grid p,
+.projeto-card,
+.canal-card,
+.video-card,
+.youtube-video,
+.banner-card,
+.formulario-contato {
+  background: rgba(255, 255, 255, 0.095);
+}
+
+@media (max-width: 720px) {
+  .cabecalho {
+    min-height: auto;
+  }
+}

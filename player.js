@@ -62,11 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => showImage(currentIndex + 1), 4000);
   });
 
-  document.querySelectorAll('.portfolio-video').forEach((video) => {
-    video.addEventListener('play', () => {
-      document.querySelectorAll('.portfolio-video').forEach((otherVideo) => {
-        if (otherVideo !== video) otherVideo.pause();
-      });
+  const pauseOtherVideos = (activeVideo) => {
+    document.querySelectorAll('.portfolio-video').forEach((video) => {
+      if (video !== activeVideo) video.pause();
     });
+  };
+
+  document.querySelectorAll('.video-shell[data-video-src]').forEach((shell) => {
+    const button = shell.querySelector('button');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      const video = document.createElement('video');
+      const source = document.createElement('source');
+
+      video.className = 'portfolio-video';
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.dataset.orientation = shell.dataset.orientation || 'vertical';
+
+      source.src = shell.dataset.videoSrc;
+      source.type = shell.dataset.videoType || 'video/mp4';
+      video.append(source, 'Seu navegador não suporta a reprodução de vídeos.');
+
+      video.addEventListener('play', () => pauseOtherVideos(video));
+      shell.replaceWith(video);
+      video.load();
+      video.play().catch(() => {});
+    });
+  });
+
+  document.querySelectorAll('.portfolio-video').forEach((video) => {
+    video.addEventListener('play', () => pauseOtherVideos(video));
   });
 });
