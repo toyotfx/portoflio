@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const nome = document.getElementById('nome').value.trim();
       const mensagem = document.getElementById('mensagem').value.trim();
       const telefone = '5553999133813';
-      const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+      const texto = `Ola, meu nome e ${nome}. ${mensagem}`;
       const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
       window.open(url, '_blank', 'noopener');
@@ -70,30 +70,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.video-shell[data-video-src]').forEach((shell) => {
     const button = shell.querySelector('button');
+    const poster = shell.dataset.videoPoster;
+
+    if (poster && !shell.style.getPropertyValue('--video-poster')) {
+      shell.style.setProperty('--video-poster', `url("${poster}")`);
+      shell.classList.add('has-poster');
+    } else if (poster) {
+      shell.classList.add('has-poster');
+    }
+
     if (!button) return;
 
     button.addEventListener('click', () => {
+      shell.classList.add('is-loading');
+      button.textContent = 'Carregando';
+      button.disabled = true;
+
+      const frame = document.createElement('div');
       const video = document.createElement('video');
       const source = document.createElement('source');
+      const status = document.createElement('p');
 
+      frame.className = 'video-player-frame';
       video.className = 'portfolio-video';
       video.controls = true;
       video.playsInline = true;
       video.preload = 'metadata';
       video.dataset.orientation = shell.dataset.orientation || 'vertical';
+      video.poster = poster || '';
+      video.controlsList = 'nodownload';
 
       source.src = shell.dataset.videoSrc;
       source.type = shell.dataset.videoType || 'video/mp4';
-      video.append(source, 'Seu navegador não suporta a reprodução de vídeos.');
+      video.append(source, 'Seu navegador nao suporta a reproducao de videos.');
+
+      status.className = 'player-status';
+      status.textContent = 'Carregando player...';
 
       video.addEventListener('play', () => pauseOtherVideos(video));
-      shell.replaceWith(video);
+      video.addEventListener('loadeddata', () => {
+        status.remove();
+      }, { once: true });
+      video.addEventListener('error', () => {
+        frame.classList.add('is-error');
+        status.textContent = 'Este video nao abriu no navegador. Use o botao abaixo para abrir o arquivo.';
+        const fallback = document.createElement('a');
+        fallback.href = shell.dataset.videoSrc;
+        fallback.target = '_blank';
+        fallback.rel = 'noopener';
+        fallback.textContent = 'Abrir arquivo';
+        fallback.className = 'player-fallback';
+        frame.append(fallback);
+      }, { once: true });
+
+      frame.append(video, status);
+      shell.replaceWith(frame);
       video.load();
       video.play().catch(() => {});
     });
-  });
-
-  document.querySelectorAll('.portfolio-video').forEach((video) => {
-    video.addEventListener('play', () => pauseOtherVideos(video));
   });
 });
