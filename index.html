@@ -1,192 +1,182 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio de Guilherme Toyota, editor de vídeo e designer gráfico para criadores, marcas e canais." />
-  <title>Portfólio | Guilherme Toyota</title>
+  <title>Guilherme Toyota | Editor de vídeo e designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YCV80FDS4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-5YCV80FDS4');
-  </script>
 </head>
 
 <body>
-  <div class="particulas" aria-hidden="true"></div>
-
-  <nav class="navegacao" aria-label="Navegação principal">
-    <a class="logo" href="#home">Toyota</a>
+  <nav class="nav" aria-label="Navegação principal">
+    <a class="brand" href="#home">Toyota</a>
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"></button>
     <ul class="menu" id="menu-principal">
-      <li><a href="#sobre" class="menu-link">Sobre</a></li>
-      <li><a href="#servicos" class="menu-link">Serviços</a></li>
-      <li><a href="#portfolio" class="menu-link">Projetos</a></li>
-      <li><a href="#canais" class="menu-link">Canais</a></li>
-      <li><a href="#contato" class="menu-link">Contato</a></li>
+      <li><a href="#work" class="menu-link">Work</a></li>
+      <li><a href="#services" class="menu-link">Serviços</a></li>
+      <li><a href="#videos" class="menu-link">Vídeos</a></li>
+      <li><a href="#channels" class="menu-link">Canais</a></li>
+      <li><a href="#contact" class="menu-link">Contato</a></li>
     </ul>
   </nav>
 
   <main>
-    <header id="home" class="cabecalho">
-      <div class="hero-heading-wrap">
-        <p class="hero-kicker">Guilherme Toyota / Portfolio 2026</p>
-        <h1 class="hero-heading"><span>Cortes que</span><span>seguram atenção.</span></h1>
-        <p class="hero-lead">
-          Edição de vídeo, thumbnails e peças para redes sociais com ritmo, leitura rápida e acabamento profissional.
-        </p>
-        <div class="hero-tags" aria-label="Serviços principais">
-          <span>Cortes</span>
-          <span>Thumbnails</span>
-          <span>Social media</span>
-        </div>
-      </div>
-
-      <div class="hero-portrait">
-        <img src="assets/img/profile.jpg" alt="Foto de Guilherme Toyota" class="foto-perfil" />
-        <span class="hero-badge">Toyota FX</span>
-      </div>
-
-      <div class="hero-bottom">
-        <p class="hero-text">
-          Visual mais direto para quem quer postar, vender ou prender público sem parecer amador.
-        </p>
+    <header id="home" class="hero shell">
+      <section class="hero-card hero-intro">
+        <span class="pill">Disponível para projetos / 2026</span>
+        <h1>Conteúdo com cara de canal grande.</h1>
+        <p>Eu edito cortes, vídeos, thumbnails, posts e banners para criadores e marcas que querem publicar com mais impacto.</p>
         <div class="hero-actions">
-          <a class="botao botao-principal contact-button" href="#contato">Contact me</a>
-          <a class="botao botao-secundario" href="#videos">Ver vídeos</a>
+          <a class="button primary" href="#contact">Contact me</a>
+          <a class="button ghost" href="#videos">Ver vídeos</a>
         </div>
-      </div>
+      </section>
+
+      <section class="hero-card portrait-card" aria-label="Perfil de Guilherme Toyota">
+        <img src="assets/img/profile.jpg" alt="Foto de Guilherme Toyota" />
+        <div>
+          <span class="status-dot">Toyota FX</span>
+          <h2>Guilherme Toyota</h2>
+          <p>Editor de vídeo & designer gráfico</p>
+        </div>
+      </section>
+
+      <section class="metric-card green">
+        <span>Foco</span>
+        <strong>Retenção</strong>
+        <p>Cortes com ritmo, legenda, impacto inicial e leitura rápida.</p>
+      </section>
+
+      <section class="metric-card dark">
+        <span>Entrega</span>
+        <strong>Pronto para postar</strong>
+        <p>Arquivo leve, visual organizado e acabamento consistente.</p>
+      </section>
+
+      <section class="quick-card">
+        <span>Serviços</span>
+        <div>
+          <b>Cortes</b>
+          <b>Thumbnails</b>
+          <b>Social media</b>
+          <b>Banners</b>
+        </div>
+      </section>
     </header>
 
-    <section class="marquee-section" aria-label="Prévia de trabalhos">
-      <div class="marquee-row">
-        <div class="marquee-track">
-          <img src="assets/img/project-01.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-04..png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-03.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-05.jpg" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/imagem 2.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-01.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-04..png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/project-03.png" alt="Projeto visual" loading="lazy" />
-        </div>
+    <section class="marquee" aria-label="Prévia visual de trabalhos">
+      <div class="marquee-line">
+        <img src="assets/img/project-01.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/project-04..png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/project-03.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/project-05.jpg" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/imagem 2.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/project-01.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/project-04..png" alt="Arte de portfólio" loading="lazy" />
       </div>
-      <div class="marquee-row reverse">
-        <div class="marquee-track">
-          <img src="assets/img/JAPAO 2MB2.jpg" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/MARVEL RIVALS.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/MARVEL RIVALS 15OFF.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/marvel rivals serviços@1,25x.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/teste 2x2@2x.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/JAPAO 2MB2.jpg" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/MARVEL RIVALS.png" alt="Projeto visual" loading="lazy" />
-          <img src="assets/img/MARVEL RIVALS 15OFF.png" alt="Projeto visual" loading="lazy" />
-        </div>
+      <div class="marquee-line reverse">
+        <img src="assets/img/JAPAO 2MB2.jpg" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/MARVEL RIVALS.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/MARVEL RIVALS 15OFF.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/marvel rivals serviços@1,25x.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/teste 2x2@2x.png" alt="Arte de portfólio" loading="lazy" />
+        <img src="assets/img/JAPAO 2MB2.jpg" alt="Arte de portfólio" loading="lazy" />
       </div>
     </section>
 
-    <section id="sobre" class="secao sobre">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Sobre mim</p>
-        <h2>Conteúdo pronto para postar melhor</h2>
+    <section class="section shell about">
+      <div class="section-heading">
+        <span class="eyebrow">Sobre mim</span>
+        <h2>Visual direto para postar, vender e prender público.</h2>
       </div>
-      <div class="sobre-grid">
-        <p>
-          Sou Guilherme, editor e designer gráfico. Faço cortes, vídeos para YouTube, thumbnails, banners e posts para quem precisa publicar com mais qualidade.
-        </p>
-        <p>
-          O foco é simples: deixar o conteúdo fácil de entender, mais bonito na primeira olhada e com ritmo para não parecer parado ou improvisado.
-        </p>
-      </div>
-    </section>
-
-    <section id="servicos" class="servicos">
-      <div class="servicos-inner">
-        <h2>Serviços</h2>
-        <div class="servicos-lista">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Edição de cortes</h3>
-              <p>Cortes curtos com ritmo, legenda, timing visual e foco em retenção para YouTube, Instagram e TikTok.</p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Thumbnails</h3>
-              <p>Capas chamativas com hierarquia forte, leitura rápida e identidade para canais e criadores.</p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Social media</h3>
-              <p>Posts, carrosséis, banners e peças comerciais com acabamento profissional.</p>
-            </div>
-          </article>
-          <article>
-            <span>04</span>
-            <div>
-              <h3>Identidade visual</h3>
-              <p>Direção visual para perfis, páginas, marcas e projetos que precisam parecer consistentes.</p>
-            </div>
-          </article>
-        </div>
+      <div class="about-grid">
+        <article>
+          <span>01</span>
+          <p>Faço cortes, vídeos para YouTube, thumbnails, banners e posts para quem precisa publicar com aparência mais profissional.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <p>Meu foco é deixar cada peça clara na primeira olhada, com ritmo, contraste e acabamento compatível com a identidade do projeto.</p>
+        </article>
       </div>
     </section>
 
-    <section id="portfolio" class="secao">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Posts, banners e capas</p>
+    <section id="services" class="services shell">
+      <span class="eyebrow light">Serviços</span>
+      <h2>Do bruto ao conteúdo pronto.</h2>
+      <div class="service-list">
+        <article>
+          <span>01</span>
+          <div>
+            <h3>Edição de cortes</h3>
+            <p>Cortes curtos com ritmo, legenda, timing visual e foco em retenção para YouTube, Instagram e TikTok.</p>
+          </div>
+        </article>
+        <article>
+          <span>02</span>
+          <div>
+            <h3>Thumbnails</h3>
+            <p>Capas chamativas com hierarquia forte, leitura rápida e identidade para canais e criadores.</p>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <div>
+            <h3>Social media</h3>
+            <p>Posts, carrosséis, banners e peças comerciais com acabamento profissional.</p>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <div>
+            <h3>Identidade visual</h3>
+            <p>Direção visual para perfis, páginas, marcas e projetos que precisam parecer consistentes.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section shell">
+      <div class="section-heading">
+        <span class="eyebrow">Posts, banners e capas</span>
         <h2>Trabalhos recentes</h2>
       </div>
-      <div class="grade-projetos">
-        <article class="projeto-card">
-          <img src="assets/img/project-01.png" alt="Post promocional com composição visual chamativa" loading="lazy" />
+      <div class="work-grid">
+        <article class="work-card large">
+          <img src="assets/img/project-01.png" alt="Post promocional com carro" loading="lazy" />
           <div>
             <h3>Post para parar o scroll</h3>
             <p>Arte pronta para feed, campanha ou chamada rápida de venda.</p>
           </div>
         </article>
-        <article class="projeto-card">
-          <img src="assets/img/project-04..png" alt="Arte gráfica de alta qualidade para redes sociais" loading="lazy" />
+        <article class="work-card">
+          <img src="assets/img/project-04..png" alt="Arte de campanha visual" loading="lazy" />
           <div>
             <h3>Campanha visual</h3>
-            <p>Peça com texto forte, contraste e leitura boa no celular.</p>
+            <p>Texto forte, contraste e leitura boa no celular.</p>
           </div>
         </article>
-        <article class="projeto-card">
-          <img src="assets/img/project-03.png" alt="Flyer digital com informações organizadas" loading="lazy" />
+        <article class="work-card">
+          <img src="assets/img/project-03.png" alt="Banner de oferta fitness" loading="lazy" />
           <div>
             <h3>Oferta fitness</h3>
             <p>Banner comercial para divulgar plano, preço ou serviço.</p>
           </div>
         </article>
-        <article class="projeto-card">
-          <img src="assets/img/project-05.jpg" alt="Layout de carrossel para Instagram" loading="lazy" />
-          <div>
-            <h3>Conteúdo de perfil</h3>
-            <p>Imagem de apoio para página, perfil ou publicação fixa.</p>
-          </div>
-        </article>
-        <article class="projeto-card">
-          <img src="assets/img/imagem 2.png" alt="Post de Instagram sobre jogos" loading="lazy" />
+        <article class="work-card">
+          <img src="assets/img/imagem 2.png" alt="Arte gamer" loading="lazy" />
           <div>
             <h3>Conteúdo gamer</h3>
-            <p>Post com visual chamativo para público de jogos e internet.</p>
+            <p>Visual chamativo para público de jogos e internet.</p>
           </div>
         </article>
-        <article class="projeto-card">
-          <img src="assets/img/JAPAO 2MB2.jpg" alt="Banner personalizado com estética japonesa" loading="lazy" />
+        <article class="work-card wide">
+          <img src="assets/img/JAPAO 2MB2.jpg" alt="Banner personalizado" loading="lazy" />
           <div>
             <h3>Capa personalizada</h3>
             <p>Composição para perfil, canal, capa ou divulgação.</p>
@@ -195,57 +185,16 @@
       </div>
     </section>
 
-    <section id="canais" class="secao canais">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Canais e clientes</p>
-        <h2>Projetos de conteúdo que cuido ou já cuidei</h2>
-      </div>
-      <div class="grade-canais">
-        <a class="canal-card youtube-card" href="https://www.youtube.com/@CortesdoToyota" target="_blank" rel="noopener">
-          <div class="canal-topo">
-            <img class="canal-avatar" src="assets/img/channel-cortes-toyota.jpg" alt="Foto do canal Cortes do Toyota" loading="lazy" />
-            <span class="canal-plataforma">YouTube</span>
-          </div>
-          <div>
-            <h3>@CortesdoToyota</h3>
-            <p>Canal próprio com foco em cortes, ritmo de retenção e conteúdo curto para audiência digital.</p>
-          </div>
-          <span class="canal-acao">Abrir canal</span>
-        </a>
-        <a class="canal-card youtube-card" href="https://www.youtube.com/@Marc%C3%A3oCortesBR" target="_blank" rel="noopener">
-          <div class="canal-topo">
-            <img class="canal-avatar" src="assets/img/channel-marcao-cortes.jpg" alt="Foto do canal Marcão Cortes BR" loading="lazy" />
-            <span class="canal-plataforma">YouTube</span>
-          </div>
-          <div>
-            <h3>@MarcãoCortesBR</h3>
-            <p>Canal de cliente com edição de cortes e conteúdo pensado para distribuição rápida.</p>
-          </div>
-          <span class="canal-acao">Abrir canal</span>
-        </a>
-        <a class="canal-card instagram-card" href="https://www.instagram.com/doishomensemeio.clips/" target="_blank" rel="noopener">
-          <div class="canal-topo">
-            <img class="canal-avatar" src="assets/img/channel-dois-homens.jpg" alt="Foto da página Dois Homens e Meio Clips" loading="lazy" />
-            <span class="canal-plataforma">Instagram</span>
-          </div>
-          <div>
-            <h3>@Doishomensemeio.clips</h3>
-            <p>Página de clips para Instagram, com foco em cortes verticais e consumo mobile.</p>
-          </div>
-          <span class="canal-acao">Abrir página</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="videos" class="secao videos-section">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Edição de vídeo</p>
+    <section id="videos" class="videos shell">
+      <div class="section-heading invert">
+        <span class="eyebrow light">Edição de vídeo</span>
         <h2>Player de trabalhos</h2>
-        <p class="secao-descricao">Prévia real dos vídeos, com arquivos convertidos para tocar no navegador sem travar o site.</p>
+        <p>Arquivos web convertidos para tocar no navegador sem travar o site.</p>
       </div>
-      <div class="grade-videos">
+      <div class="video-grid">
         <article class="video-card vertical">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/video-01.jpg');" data-video-src="assets/video/web/video-01-web.mp4" data-video-poster="assets/video/posters/video-01.jpg" data-video-type="video/mp4" data-orientation="vertical">
+          <div class="video-shell" data-video-src="assets/video/web/video-01-web.mp4" data-video-poster="assets/video/posters/video-01.jpg" data-video-type="video/mp4" data-orientation="vertical">
+            <img class="video-cover" src="assets/video/posters/video-01.jpg" alt="Capa do vídeo curto" loading="lazy" />
             <span>MP4</span>
             <strong>Vídeo curto</strong>
             <button type="button" aria-label="Tocar Vídeo curto">Play</button>
@@ -254,7 +203,8 @@
           <p>Edição criativa com foco em storytelling e ritmo visual.</p>
         </article>
         <article class="video-card vertical">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/video-02.jpg');" data-video-src="assets/video/web/video-02-web.mp4" data-video-poster="assets/video/posters/video-02.jpg" data-video-type="video/mp4" data-orientation="vertical">
+          <div class="video-shell" data-video-src="assets/video/web/video-02-web.mp4" data-video-poster="assets/video/posters/video-02.jpg" data-video-type="video/mp4" data-orientation="vertical">
+            <img class="video-cover" src="assets/video/posters/video-02.jpg" alt="Capa do vídeo lyrics" loading="lazy" />
             <span>MP4</span>
             <strong>Lyrics</strong>
             <button type="button" aria-label="Tocar Lyrics">Play</button>
@@ -263,7 +213,8 @@
           <p>Composição visual para acompanhar música e dar dinâmica ao conteúdo.</p>
         </article>
         <article class="video-card vertical">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/video-03.jpg');" data-video-src="assets/video/web/video-03-web.mp4" data-video-poster="assets/video/posters/video-03.jpg" data-video-type="video/mp4" data-orientation="vertical">
+          <div class="video-shell" data-video-src="assets/video/web/video-03-web.mp4" data-video-poster="assets/video/posters/video-03.jpg" data-video-type="video/mp4" data-orientation="vertical">
+            <img class="video-cover" src="assets/video/posters/video-03.jpg" alt="Capa do vídeo lyrics" loading="lazy" />
             <span>MP4</span>
             <strong>Lyrics vídeo</strong>
             <button type="button" aria-label="Tocar Lyrics vídeo">Play</button>
@@ -272,25 +223,28 @@
           <p>Ritmo, cortes e elementos visuais sincronizados com o áudio.</p>
         </article>
         <article class="video-card horizontal">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/video-04.jpg');" data-video-src="assets/video/web/video-04-web.mp4" data-video-poster="assets/video/posters/video-04.jpg" data-video-type="video/mp4" data-orientation="horizontal">
+          <div class="video-shell" data-video-src="assets/video/web/video-04-web.mp4" data-video-poster="assets/video/posters/video-04.jpg" data-video-type="video/mp4" data-orientation="horizontal">
+            <img class="video-cover" src="assets/video/posters/video-04.jpg" alt="Capa da intro viral" loading="lazy" />
             <span>MP4</span>
             <strong>Intro viral YouTube</strong>
             <button type="button" aria-label="Tocar Intro viral YouTube">Play</button>
           </div>
           <h3>Intro viral YouTube</h3>
-          <p>Abertura rápida para prender atenção logo no começo do vídeo.</p>
+          <p>Abertura rápida para prender atenção logo no começo.</p>
         </article>
         <article class="video-card horizontal">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/video-05.jpg');" data-video-src="assets/video/web/video-05-web.mp4" data-video-poster="assets/video/posters/video-05.jpg" data-video-type="video/mp4" data-orientation="horizontal">
+          <div class="video-shell" data-video-src="assets/video/web/video-05-web.mp4" data-video-poster="assets/video/posters/video-05.jpg" data-video-type="video/mp4" data-orientation="horizontal">
+            <img class="video-cover" src="assets/video/posters/video-05.jpg" alt="Capa da propaganda comercial" loading="lazy" />
             <span>MP4</span>
             <strong>Propaganda comercial</strong>
             <button type="button" aria-label="Tocar Propaganda comercial">Play</button>
           </div>
           <h3>Propaganda comercial</h3>
-          <p>Peça de divulgação com linguagem de venda e apresentação do serviço.</p>
+          <p>Peça de divulgação com linguagem de venda.</p>
         </article>
         <article class="video-card vertical">
-          <div class="video-shell" style="--video-poster: url('../assets/video/posters/angelo.jpg');" data-video-src="assets/video/web/angelo-web.mp4" data-video-poster="assets/video/posters/angelo.jpg" data-video-type="video/mp4" data-orientation="vertical">
+          <div class="video-shell" data-video-src="assets/video/web/angelo-web.mp4" data-video-poster="assets/video/posters/angelo.jpg" data-video-type="video/mp4" data-orientation="vertical">
+            <img class="video-cover" src="assets/video/posters/angelo.jpg" alt="Capa do vídeo Angelo Lubrificantes" loading="lazy" />
             <span>MP4</span>
             <strong>Angelo Lubrificantes</strong>
             <button type="button" aria-label="Tocar Angelo Lubrificantes">Play</button>
@@ -300,78 +254,105 @@
         </article>
       </div>
     </section>
-    <section id="youtube" class="secao">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">YouTube</p>
-        <h2>Trabalhos publicados</h2>
+
+    <section id="channels" class="section shell">
+      <div class="section-heading">
+        <span class="eyebrow">Canais e clientes</span>
+        <h2>Projetos de conteúdo que cuido ou já cuidei</h2>
       </div>
-      <div class="grade-youtube">
-        <a class="youtube-video" href="https://www.youtube.com/watch?v=cRWjao1ZiVA" target="_blank" rel="noopener">
-          <img src="https://img.youtube.com/vi/cRWjao1ZiVA/maxresdefault.jpg" alt="Thumbnail do vídeo Projeto Jean na Gringa" loading="lazy" />
-          <div>
-            <h3>Projeto Jean na Gringa</h3>
-            <p>Vídeo para YouTube com edição e acabamento para retenção.</p>
-          </div>
+      <div class="channel-grid">
+        <a class="channel-card" href="https://www.youtube.com/@CortesdoToyota" target="_blank" rel="noopener">
+          <img src="assets/img/channel-cortes-toyota.jpg" alt="Foto do canal Cortes do Toyota" loading="lazy" />
+          <span>YouTube</span>
+          <h3>@CortesdoToyota</h3>
+          <p>Canal próprio com foco em cortes e conteúdo curto.</p>
         </a>
-        <a class="youtube-video" href="https://www.youtube.com/watch?v=yWqPF4mGlqM" target="_blank" rel="noopener">
-          <img src="https://img.youtube.com/vi/yWqPF4mGlqM/maxresdefault.jpg" alt="Thumbnail do vídeo Lipezin" loading="lazy" />
-          <div>
-            <h3>Lipezin</h3>
-            <p>Vídeo de games com linguagem rápida e visual de internet.</p>
-          </div>
+        <a class="channel-card" href="https://www.youtube.com/@Marc%C3%A3oCortesBR" target="_blank" rel="noopener">
+          <img src="assets/img/channel-marcao-cortes.jpg" alt="Foto do canal Marcão Cortes BR" loading="lazy" />
+          <span>YouTube</span>
+          <h3>@MarcãoCortesBR</h3>
+          <p>Canal de cliente com edição de cortes para distribuição rápida.</p>
+        </a>
+        <a class="channel-card" href="https://www.instagram.com/doishomensemeio.clips/" target="_blank" rel="noopener">
+          <img src="assets/img/channel-dois-homens.jpg" alt="Foto da página Dois Homens e Meio Clips" loading="lazy" />
+          <span>Instagram</span>
+          <h3>@Doishomensemeio.clips</h3>
+          <p>Página de clips verticais para consumo mobile.</p>
         </a>
       </div>
     </section>
 
-    <section id="banners" class="secao">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Vendas online</p>
-        <h2>Banners e ofertas</h2>
+    <section class="section shell process">
+      <div class="section-heading">
+        <span class="eyebrow">Processo</span>
+        <h2>Simples para sair do material bruto ao publicado</h2>
       </div>
-      <div class="grade-banners">
-        <article class="banner-card destaque">
-          <div class="carousel" aria-label="Banners Marvel Rivals">
-            <button class="carousel-btn prev" type="button" aria-label="Banner anterior">‹</button>
-            <img src="assets/img/MARVEL RIVALS.png" alt="Banner de venda Marvel Rivals" class="carousel-img active" loading="lazy" />
-            <img src="assets/img/MARVEL RIVALS 15OFF.png" alt="Banner promocional Marvel Rivals com desconto" class="carousel-img" loading="lazy" />
-            <button class="carousel-btn next" type="button" aria-label="Próximo banner">›</button>
-          </div>
-          <h3>GG MAX / Discord Vendas</h3>
-          <p>Banner de oferta para conversão em comunidades e marketplaces.</p>
+      <div class="process-grid">
+        <article>
+          <span>01</span>
+          <h3>Recebo o material</h3>
+          <p>Você envia vídeo, objetivo, referência ou canal.</p>
         </article>
-        <article class="banner-card">
-          <img src="assets/img/marvel rivals serviços@1,25x.png" alt="Banner de serviços Marvel Rivals" loading="lazy" />
-          <h3>Serviços Marvel Rivals</h3>
-          <p>Arte de serviço para venda online.</p>
+        <article>
+          <span>02</span>
+          <h3>Organizo a direção</h3>
+          <p>Defino ritmo, cortes, texto, thumbnail e hierarquia.</p>
         </article>
-        <article class="banner-card">
-          <img src="assets/img/teste 2x2@2x.png" alt="Banner de edição de vídeo" loading="lazy" />
-          <h3>Edição de vídeo</h3>
-          <p>Peça comercial para divulgar serviço de edição.</p>
+        <article>
+          <span>03</span>
+          <h3>Entrego pronto</h3>
+          <p>Você recebe arquivos finais prontos para publicação.</p>
         </article>
       </div>
     </section>
 
-    <section id="contato" class="secao contato">
-      <div class="secao-cabecalho">
-        <p class="eyebrow">Contato</p>
+    <section class="pricing shell">
+      <div class="section-heading">
+        <span class="eyebrow">Pacotes</span>
+        <h2>Escolha um formato para começar</h2>
+      </div>
+      <div class="pricing-grid">
+        <article>
+          <span>Start</span>
+          <h3>Corte avulso</h3>
+          <p>Para testar um vídeo ou resolver uma publicação específica.</p>
+          <a href="#contact">Pedir orçamento</a>
+        </article>
+        <article class="featured">
+          <span>Mais pedido</span>
+          <h3>Pacote mensal</h3>
+          <p>Para criador ou marca que precisa postar com frequência.</p>
+          <a href="#contact">Conversar agora</a>
+        </article>
+        <article>
+          <span>Visual</span>
+          <h3>Design para canal</h3>
+          <p>Thumbnails, banners, posts e peças para reforçar sua presença.</p>
+          <a href="#contact">Ver possibilidades</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact shell">
+      <div class="section-heading">
+        <span class="eyebrow">Contato</span>
         <h2>Vamos criar algo com cara profissional</h2>
       </div>
-      <form class="formulario-contato" id="formulario">
+      <form class="contact-form" id="formulario">
         <label>
           <span>Nome</span>
           <input type="text" name="nome" placeholder="Seu nome" required id="nome" />
         </label>
         <label>
           <span>Mensagem</span>
-          <textarea placeholder="Digite sua mensagem" rows="4" id="mensagem" required></textarea>
+          <textarea placeholder="Me conte o que você precisa" rows="4" id="mensagem" required></textarea>
         </label>
-        <button type="submit" class="botao-form">Enviar no WhatsApp</button>
+        <button type="submit" class="button primary">Enviar no WhatsApp</button>
       </form>
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="footer">
     <p>&copy; 2026 Guilherme Toyota. Todos os direitos reservados.</p>
   </footer>
 
